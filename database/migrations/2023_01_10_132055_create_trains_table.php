@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Faker\Generator as Faker;
 
 return new class extends Migration
 {
@@ -25,6 +24,7 @@ return new class extends Migration
             $table->smallInteger('carriages')->nullable();
             $table->tinyInteger('on_time')->default(1);
             $table->tinyInteger('is_delete')->default(0);
+            $table->timestamps();
         });
     }
 
